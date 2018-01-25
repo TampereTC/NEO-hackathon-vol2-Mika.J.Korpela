@@ -1,0 +1,1 @@
+java -jar ../HelloClient/dist/HelloClient.jar %*
