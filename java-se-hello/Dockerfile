@@ -1,4 +1,4 @@
 FROM java:7
 WORKDIR /app
-COPY JavaWebService.jar .
-CMD ["java", "-jar", "JavaWebService.jar"]
+COPY JavaSeHello.jar .
+CMD ["java", "-jar", "JavaSeHello.jar"]
