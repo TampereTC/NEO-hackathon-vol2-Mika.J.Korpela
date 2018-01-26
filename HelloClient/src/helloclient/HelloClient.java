@@ -2,7 +2,6 @@ package helloclient;
 
 import java.io.BufferedReader;
 import java.io.InputStreamReader;
-import java.math.BigDecimal;
 import java.net.URL;
 import java.net.URLConnection;
 
@@ -24,34 +23,36 @@ public class HelloClient {
         // variables.
         String endPointAddress;
         long iterations;
-        BigDecimal before;
-        BigDecimal after;
-        BigDecimal delta;
-        BigDecimal milliSecondPerRequest;
+        Double before;
+        Double after;
+        Double delta;
+        Double milliSecondPerRequest;
         
         // get comnd line arguments.
         endPointAddress = args[0];
         iterations = Long.valueOf(args[1]);
         
         // get timestamp before.
-        before = BigDecimal.valueOf(System.currentTimeMillis());
+        before = Double.valueOf(System.currentTimeMillis());
 
         // execute required number of iterations.
         for (int i = 0; i < iterations; i++)
         {
+            //System.out.println("Request: " + i + "/" + iterations);
             sendRequest(endPointAddress);
         }
         
         // get timestamp after.
-        after = BigDecimal.valueOf(System.currentTimeMillis());
+        after = Double.valueOf(System.currentTimeMillis());
         
         // caluculate delta.
-        delta = after.subtract(before);
+        delta = after- before;
         
         // calculate time per request; in milli seconds.
-        milliSecondPerRequest = delta.divide(BigDecimal.valueOf(iterations));
+        milliSecondPerRequest = delta/iterations;
         
-        BigDecimal requestPerSecond = BigDecimal.valueOf(1000).divide(milliSecondPerRequest);
+        Double oneThousand = Double.valueOf(1000);
+        Double requestPerSecond = 1000/milliSecondPerRequest;
 
         System.out.println("delta (ms): " + delta);
         System.out.println("ms/request: " + milliSecondPerRequest);

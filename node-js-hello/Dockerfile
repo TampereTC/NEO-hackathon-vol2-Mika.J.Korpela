@@ -3,7 +3,9 @@
 #
 
 # get the parent image.
-FROM node:6.9.2
+# FROM node:6.9.2
+# FROM node:slim
+FROM node:alpine
 
 # set working directory; created if not existing.
 WORKDIR /app
