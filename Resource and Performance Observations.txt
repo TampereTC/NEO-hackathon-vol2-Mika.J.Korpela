@@ -35,3 +35,4 @@ node-js-express-hello	6.9.2		  558 req/s		1.095 req/s		1.310 req/s		1.382 req/s
 python-flask-hello		2.7-alpine	  320 req/s		  438 req/s		  526 req/s		  572 req/s
 java-se-hello			7			  483 req/s		  746 req/s		  881 req/s		1.152 req/s
 java-se-hello			7-jre		  363 req/s		  570 req/s		  807 req/s		  964 req/s
+garage-hello			payara		  225 req/s		  367 req/s		  686 req/s		1.108 req/s
